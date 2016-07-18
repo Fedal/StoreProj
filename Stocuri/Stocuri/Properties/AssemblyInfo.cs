@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("tetttt")]
+[assembly: AssemblyTitle("Stocuri")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("tetttt")]
+[assembly: AssemblyProduct("Stocuri")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5b40d6b8-2b81-49fd-a2d4-47a40b25ab48")]
+[assembly: Guid("22af3d52-e4ad-4b88-8d34-340231a5a832")]
 
 // Version information for an assembly consists of the following four values:
 //
