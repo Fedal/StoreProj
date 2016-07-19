@@ -9,10 +9,9 @@ namespace Storev2
 	class LocationController
 	{
 
-		internal static Location SetLocation(Store store,ref int quantity)
+		internal static Location SetLocation(IStoreHouse sHouse,ref int quantity)
 		{
 			Location loc;
-			IStoreHouse sHouse = LocationView.Show(store);
 
 			loc = LocationDetalis(sHouse,ref quantity);
 			return loc;
