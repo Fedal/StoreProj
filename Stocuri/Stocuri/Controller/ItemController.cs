@@ -63,6 +63,8 @@ namespace Stocuri
 
 			Item i = new Item(item, store.Stock.Items[index].Price, store.Stock.Items[index].ExpDate, quantity, store.Stock.Items[index].Category);
 
+
+
 			sHouse.Layout.Shelves[shelve].ItemList.Add(i);
 			sHouse.Items.Add(i);
 		}

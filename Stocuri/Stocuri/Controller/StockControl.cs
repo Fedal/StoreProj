@@ -8,7 +8,7 @@ namespace Stocuri
 {
 	class StockControl
 	{
-		internal static void AddItem(Stock stock)
+		internal static void AddItem(Store store, Stock stock)
 		{
 			string name;
 			int price = 0;
@@ -16,6 +16,7 @@ namespace Stocuri
 			int quantity;
 			string category;
 			string location;
+			int row;
 
 			Console.Write("Item name: ");
 			name = Console.ReadLine();
@@ -32,6 +33,23 @@ namespace Stocuri
 
 			Console.Write("Category: ");
 			category = Console.ReadLine();
+
+			Console.WriteLine("Item location: ");
+			switch (Initializer.LocationMenu())
+			{
+				case ConsoleKey.D1:
+					{
+						location = store.Shop.Name;
+						break;
+					}
+				case ConsoleKey.D2:
+					{
+						location = Initializer.WarehouseMenu(store);
+						break;
+					}
+				default:
+					break;
+			}
 
 			int year = 0, month = 0, day = 0;
 			Console.WriteLine("Expiration date: ");
@@ -53,9 +71,11 @@ namespace Stocuri
 					else
 						Console.WriteLine("You can't have the same product with different prices !");
 				}*/
-				else
-					stock.Items.Add(new Item(name, price, expDate, quantity, category));
-
+			else
+			{
+				Item item = new Item(name, price, expDate, quantity, category, location);
+				stock.Items.Add(item);
+			}
 
 		}
 		internal static int FindItem(Stock stock, string name)

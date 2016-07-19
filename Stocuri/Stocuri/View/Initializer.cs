@@ -71,7 +71,7 @@ namespace Stocuri
 						}
 					case ConsoleKey.D5:
 						{
-							StockControl.AddItem(store.Stock);
+							StockControl.AddItem(store, store.Stock);
 							break;
 						}
 					case ConsoleKey.D6:
@@ -141,6 +141,32 @@ namespace Stocuri
 				default:
 					break;
 			}
+		}
+
+		internal static ConsoleKey LocationMenu()
+		{
+			Console.WriteLine("1. Shop");
+			Console.WriteLine("2. Warehouse");
+			ConsoleKeyInfo cki = Console.ReadKey();
+
+			return cki.Key;
+		}
+
+		internal static string WarehouseMenu(Store store)
+		{
+			for(int i=0;i<store.WHouses.Length; i++)
+				Console.WriteLine("{0}. {1}", i+1, store.WHouses[i].Name);
+
+			int index=0;
+			do
+			{
+				Console.Write("Index: ");
+				index = Int32.Parse(Console.ReadLine());
+				if(index>store.WHouses.Length)
+					Console.WriteLine("Index too big, try again");
+			} while (index > store.WHouses.Length);
+
+			return store.WHouses[index - 1].Name;
 		}
 	}
 }
