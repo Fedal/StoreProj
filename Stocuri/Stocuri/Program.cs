@@ -10,6 +10,7 @@ namespace Stocuri
   {
     static void Main(string[] args)
     {
+      Console.WriteLine("Hello world!");
       Initializer init = new Initializer();
       init.Start();
     }
