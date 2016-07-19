@@ -48,6 +48,7 @@
     <Compile Include="Controller\LayoutControl.cs" />
     <Compile Include="Controller\ShopControl.cs" />
     <Compile Include="Controller\StoreControl.cs" />
+    <Compile Include="Controller\WarehouseControl.cs" />
     <Compile Include="Model\Administrator.cs" />
     <Compile Include="Model\IEmployee.cs" />
     <Compile Include="Model\IStoreHouse.cs" />

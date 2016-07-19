@@ -13,6 +13,7 @@ namespace Storev2
 			Console.WriteLine("\tShop Layout");
 			LayoutControl.SetLayout(store.Shop);
 			Console.WriteLine("\tWarehouse options");
+			WarehouseControl.Set(store);
 		}
 	}
 }
