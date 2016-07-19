@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\EmployeeServices.cs" />
+    <Compile Include="Controller\IEmployeeService.cs" />
+    <Compile Include="Controller\IXmlService.cs" />
     <Compile Include="Controller\LayoutControl.cs" />
     <Compile Include="Controller\ShopControl.cs" />
     <Compile Include="Controller\StoreControl.cs" />
