@@ -71,6 +71,7 @@
     <Compile Include="Views\LocationView.cs" />
     <Compile Include="Views\MainMenu.cs" />
     <Compile Include="Views\StoreMenu.cs" />
+    <Compile Include="Views\StoreSetupView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
