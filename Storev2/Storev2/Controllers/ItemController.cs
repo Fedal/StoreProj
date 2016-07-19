@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Storev2
 {
-	class EmployeeMenu
+	class ItemController
 	{
-		internal static void Show()
+		internal static void Add(Store store, Item item)
 		{
-		
+			store.Stock.Items.Add(item);
+
 		}
 	}
 }

@@ -46,9 +46,9 @@ namespace Storev2
       set { _category = value; }
     }
 
-    string _location = "Not assigned yet";
+	Location _location;
 
-    public string Location
+    public Location Location
     {
       get { return _location; }
       set { _location = value; }

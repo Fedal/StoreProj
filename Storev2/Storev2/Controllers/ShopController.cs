@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Storev2
 {
-	class StoreControl
+	class ShopControl
 	{
-		
+
 	}
 }

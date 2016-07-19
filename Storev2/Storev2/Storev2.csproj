@@ -45,29 +45,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\LayoutControl.cs" />
-    <Compile Include="Controller\ShopControl.cs" />
-    <Compile Include="Controller\StoreControl.cs" />
-    <Compile Include="Controller\WarehouseControl.cs" />
-    <Compile Include="Model\Administrator.cs" />
-    <Compile Include="Model\IEmployee.cs" />
-    <Compile Include="Model\IStoreHouse.cs" />
-    <Compile Include="Model\Item.cs" />
-    <Compile Include="Model\Layout.cs" />
-    <Compile Include="Model\Mover.cs" />
-    <Compile Include="Model\Seller.cs" />
-    <Compile Include="Model\Shelve.cs" />
-    <Compile Include="Model\Shop.cs" />
-    <Compile Include="Model\Stock.cs" />
-    <Compile Include="Model\Store.cs" />
-    <Compile Include="Model\Warehouse.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
+    <Compile Include="Controllers\LayoutController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="Controllers\WarehouseController.cs" />
+    <Compile Include="Models\Administrator.cs" />
+    <Compile Include="Models\IEmployee.cs" />
+    <Compile Include="Models\IStoreHouse.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Layout.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\Mover.cs" />
+    <Compile Include="Models\Seller.cs" />
+    <Compile Include="Models\Shelve.cs" />
+    <Compile Include="Models\Shop.cs" />
+    <Compile Include="Models\Stock.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\Warehouse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\EmployeeMenu.cs" />
-    <Compile Include="View\InitializeMenu.cs" />
-    <Compile Include="View\ItemMenu.cs" />
-    <Compile Include="View\MainMenu.cs" />
-    <Compile Include="View\StoreMenu.cs" />
+    <Compile Include="Views\EmployeeMenu.cs" />
+    <Compile Include="Views\InitializeMenu.cs" />
+    <Compile Include="Views\ItemMenu.cs" />
+    <Compile Include="Views\LocationView.cs" />
+    <Compile Include="Views\MainMenu.cs" />
+    <Compile Include="Views\StoreMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

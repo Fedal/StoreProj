@@ -23,7 +23,7 @@ namespace Storev2
 			{
 				case ConsoleKey.D1:
 				{
-					EmployeeMenu.Show();
+					EmployeeMenu.Show(store);
 					break;
 				}
 				case ConsoleKey.D2:
@@ -33,7 +33,7 @@ namespace Storev2
 				}
 				case ConsoleKey.D3:
 				{
-					ItemMenu.Show();
+					ItemMenu.Show(store);
 					break;
 				}
 				case ConsoleKey.D4:

@@ -28,8 +28,7 @@ namespace Storev2
     {
       this.Shelves = new Shelve[shelves];
       for (int i = 0; i < shelves; i++)
-        Shelves[i] = new Shelve();
-      Shelve.Capacity = shelveCapacity;
+        Shelves[i] = new Shelve(shelveCapacity);
       this.Rows = rows;
     }
   }
