@@ -16,7 +16,7 @@ namespace Storev2
 			Console.WriteLine("3. View item by name");
 			Console.WriteLine("4. View all items");
 			Console.WriteLine("5. Move items to expiration shelve");
-			Console.WriteLine("6. Back");
+			Console.WriteLine("0. Back");
 
 			ConsoleKeyInfo cki = Console.ReadKey();
 
@@ -27,8 +27,24 @@ namespace Storev2
 					ItemController.Add(store, NewItem(store));
 					break;
 				}
+				case ConsoleKey.D2:
+				{
+					ItemController.Move(store);
+					break;
+				}
+				case ConsoleKey.D4:
+				{
+					ItemController.ViewAllItems(store);
+					break;
+				}
+				case ConsoleKey.D0:
+				{
+					MainMenu.Show(store);
+					break;
+				}
 				default:
 				{
+					Console.WriteLine("Invalid key");
 					break;
 				}
 			}
@@ -54,7 +70,9 @@ namespace Storev2
 			int quantity = 0;
 
 			Console.WriteLine("Item location: ");
-			Location loc = LocationController.SetLocation(store,ref quantity);
+			Console.WriteLine("\tWhere do you want to place your item?");
+			IStoreHouse sHouse = LocationView.Show(store);
+			Location loc = LocationController.SetLocation(sHouse,ref quantity);
 
 			DateTime expDate;
 			do
@@ -73,7 +91,8 @@ namespace Storev2
 			} while (expDate < DateTime.Now);
 
 			Item item = new Item(name, price, expDate, quantity, category);
-			item.Location = loc;
+			item.Location.Add(loc);
+			sHouse.Items.Add(item);
 			return item;
 		}
 	}

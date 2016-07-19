@@ -66,6 +66,7 @@
     <Compile Include="Models\Warehouse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ConfirmView.cs" />
     <Compile Include="Views\EmployeeMenu.cs" />
     <Compile Include="Views\InitializeMenu.cs" />
     <Compile Include="Views\ItemMenu.cs" />

@@ -46,13 +46,19 @@ namespace Storev2
       set { _category = value; }
     }
 
-	Location _location;
+	List<Location> _location = new List<Location>();
 
-    public Location Location
-    {
-      get { return _location; }
-      set { _location = value; }
-    }
+	internal List<Location> Location
+	{
+		get
+		{
+			return _location;
+		}
+		set
+		{
+			_location = value;
+		}
+	}
 
     public Item(string name, int price, DateTime expDate, int quantity, string category)
     {
