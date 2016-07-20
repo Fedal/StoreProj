@@ -17,7 +17,6 @@ namespace Storev2
       Console.WriteLine("1. Employee menu");
       Console.WriteLine("2. Store menu");
       Console.WriteLine("3. Item menu");
-      Console.WriteLine("4. Save");
       Console.WriteLine("0. Exit");
 
       cki = Console.ReadKey();
@@ -36,10 +35,6 @@ namespace Storev2
         case ConsoleKey.D3:
           {
             ItemMenu.Show(store);
-            break;
-          }
-        case ConsoleKey.D4:
-          {
             break;
           }
         case ConsoleKey.D0:
