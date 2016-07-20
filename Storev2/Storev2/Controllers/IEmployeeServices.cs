@@ -11,7 +11,7 @@ namespace Storev2
     void AddEmployee(IEmployee x, Store y);
     void RemoveEmployee(string num, string ssnmb, Store y);
     void ListEmployees(Store y);
-    //void FindEmployee( string name , string ssn);
+    void FindEmployee(string name, string ssn, Store y);
 
   }
 }
