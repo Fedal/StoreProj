@@ -57,6 +57,8 @@ namespace Storev2
             break;
           }
       }
+
+      MainMenu.Show(store);
     }
 
     private static Item NewItem(Store store)
