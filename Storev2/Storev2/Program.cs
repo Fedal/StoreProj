@@ -10,25 +10,21 @@ namespace Storev2
 {
 	class Program
 	{
-		static void Main(string[] args)
-		{ 
-      Console.WriteLine("I show up!!!");
- 
- 
-	Store store = new Store();
-  
+    static void Main(string[] args)
+    {
+      Store store = new Store();
 
-if (!File.Exists(Directory.GetCurrentDirectory() + "\\Data\\StoreSetings.xml"))
-      {FileGeneratorService.GenerateFiles();
+      if (!File.Exists(Directory.GetCurrentDirectory() + "\\Data\\StoreSetings.xml"))
+      {
+        FileGeneratorService.GenerateFiles();
         InitializeMenu.Show(store);
-        }
-else
-{FileStoreCotroler.GetLayout(store);
-}
-    Console.ReadLine();
+      }
+      else
+      {
+        FileStoreCotroler.GetLayout(store);
+      }
 
-        MainMenu.Show(store);
-		}
-
+      MainMenu.Show(store);
+    }
 	}
 }

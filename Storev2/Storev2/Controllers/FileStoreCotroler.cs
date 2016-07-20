@@ -44,6 +44,12 @@ namespace Storev2
          store.Shop.Layout = forStore;
          break;
       }
+      int WarhNr = -1;
+      foreach (var x in Layouts)
+      {
+        WarhNr++;
+      }
+      store.WHouses = new Warehouse[WarhNr];
       int i = -1;
       foreach (var x in Layouts)
       {
