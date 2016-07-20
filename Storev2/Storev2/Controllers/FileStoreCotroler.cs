@@ -7,7 +7,7 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Storev2.Controllers
+namespace Storev2
 {
   class FileStoreCotroler
   {
