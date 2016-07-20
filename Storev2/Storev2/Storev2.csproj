@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\FileGeneratorService.cs" />
+    <Compile Include="Controllers\FileStoreCotroler.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
