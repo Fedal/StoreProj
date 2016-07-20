@@ -18,6 +18,11 @@ namespace Storev2
 			get;
 			set;
 		}
+    string SSN
+    {
+      get;
+      set;
+    }
 		string Role
 		{
 			get;
