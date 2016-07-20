@@ -32,6 +32,7 @@ namespace Storev2
             StoreSetupView.ShowStoreSetup(store);
             break;
           case ConsoleKey.D0:
+            MainMenu.Show(store);
             break;
           default:
             Console.WriteLine("[!]Invalid entry");
