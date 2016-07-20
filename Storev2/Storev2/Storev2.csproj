@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\EmployeeServices.cs" />
+    <Compile Include="Controllers\FileEmpolyeeControler.cs" />
     <Compile Include="Controllers\FileGeneratorService.cs" />
     <Compile Include="Controllers\FileStoreCotroler.cs" />
     <Compile Include="Controllers\IEmployeeServices.cs" />
