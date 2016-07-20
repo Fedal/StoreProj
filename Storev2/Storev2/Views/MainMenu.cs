@@ -39,6 +39,7 @@ namespace Storev2
           }
         case ConsoleKey.D0:
           {
+            Environment.Exit(0);
             break;
           }
         default:
