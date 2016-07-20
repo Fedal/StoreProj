@@ -12,11 +12,13 @@ namespace Storev2
 
 		string _name;
 		int _salary;
+    string _ssn;
 
-		public Administrator(string name, int salary)
+		public Administrator(string name, string ssnx, int salary)
 		{
 			this.Name = name;
 			this.Salary = salary;
+      this.SSN = ssnx;
 		}
 
 		public int Salary
@@ -43,12 +45,23 @@ namespace Storev2
 			}
 		}
 
-		public string Role
-		{
-			get
-			{
-				return _role;
-			}
+    public string Role
+    {
+      get
+      {
+        return _role;
+      }
+    }
+        public string SSN
+    {
+      get
+      {
+        return _ssn;
+      }
+      set
+      {
+        _ssn = value;
+      }
 		}
 	}
 }
