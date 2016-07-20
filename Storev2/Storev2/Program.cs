@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 
 namespace Storev2
@@ -11,11 +12,15 @@ namespace Storev2
 	{
 		static void Main(string[] args)
 		{
+	Store store = new Store();
+			
+		
+      if (!File.Exists(Directory.GetCurrentDirectory() + "\\Data\\StoreSetings.xml"))
+      {FileGeneratorService.GenerateFiles();
+        InitializeMenu.Show(store);
+        }
+			
 
-			FileGeneratorService.GenerateFiles();
-      Console.WriteLine("asdwefdewdwwedwed");
-			Store store = new Store();
-			InitializeMenu.Show(store);
 			MainMenu.Show(store);
 		}
 

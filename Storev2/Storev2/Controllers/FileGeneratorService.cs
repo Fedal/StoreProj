@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Xml.Linq;
 
 namespace Storev2
 {
@@ -22,24 +23,29 @@ namespace Storev2
             }
 
 			string pathString = path+"\\StoreSetings.xml";
-			
+			 
 			 if (!File.Exists(pathString))
         {
-            FileStream store_setings = File.Create(pathString);
+            
+         XDocument doc = new XDocument(new XElement("Store"));
+         doc.Save(pathString);
 			Console.WriteLine("The file StoreSetings was created successfully at {0}.", File.GetCreationTime(pathString));
 			 }
+
 			pathString = path+"\\Inventory.xml";
 			
 			 if (!File.Exists(pathString))
         {
-            FileStream InventoryFile = File.Create(pathString);
+          XDocument doc = new XDocument(new XElement("Inventory"));
+          doc.Save(pathString);
 			Console.WriteLine("The file Inventory was created successfully at {0}.", File.GetCreationTime(pathString));
 			 }
 			pathString = path+"\\Employees.xml";
 			
 			 if (!File.Exists(pathString))
         {
-            FileStream EmployeeFile = File.Create(pathString);
+          XDocument doc = new XDocument(new XElement("Employees"));
+          doc.Save(pathString);
 			Console.WriteLine("The file Employee was created successfully at {0}.", File.GetCreationTime(pathString));
 			 }
 	}
