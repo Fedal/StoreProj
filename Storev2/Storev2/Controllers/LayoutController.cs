@@ -20,7 +20,7 @@ namespace Storev2
 			shelveCapacity = Int32.Parse(Console.ReadLine());
 			Console.Write("Rows: ");
 			rows = Int32.Parse(Console.ReadLine());
-
+      FileStoreCotroler.AddLayout(shelves, shelveCapacity, rows, sHouse.Name);// WRITES TO FILE STORESEINGS
 			sHouse.Layout = new Layout(shelves, shelveCapacity, rows);
 		}
 	}

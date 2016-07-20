@@ -13,6 +13,7 @@ namespace Storev2
     public void AddEmployee(IEmployee x, Store y)
     {
       y.Employees.Add(x);
+      FileEmpolyeeControler.AddEmp(x);
     }
 
 
