@@ -13,6 +13,7 @@ namespace Storev2
 		{
 
 			FileGeneratorService.GenerateFiles();
+      Console.WriteLine("asdwefdewdwwedwed");
 			Store store = new Store();
 			InitializeMenu.Show(store);
 			MainMenu.Show(store);
