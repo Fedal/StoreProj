@@ -19,6 +19,10 @@ namespace Storev2
         Console.WriteLine("2: Fire employee");
         Console.WriteLine("3: View employee list");
         Console.WriteLine("4: Find employee");
+       Console.WriteLine("0: Go back to the main menu");
+        
+        
+       
 
         Console.Write("\n Enter here -->");
         choice = int.Parse(Console.ReadLine());
@@ -48,6 +52,12 @@ namespace Storev2
             {
               Console.Clear();
               Find(store);
+              break;
+            }
+
+            case 0:
+            {
+              MainMenu.Show(store);
               break;
             }
         }
