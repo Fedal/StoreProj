@@ -18,6 +18,7 @@ namespace Storev2
         Console.WriteLine("1: Hire new employee");
         Console.WriteLine("2: Fire employee");
         Console.WriteLine("3: View employee list");
+        Console.WriteLine("4: Find employee");
 
         Console.Write("\n Enter here -->");
         choice = int.Parse(Console.ReadLine());
@@ -40,6 +41,13 @@ namespace Storev2
             {
               Console.Clear();
               Get(store);
+              break;
+            }
+
+          case 4:
+            {
+              Console.Clear();
+              Find(store);
               break;
             }
         }
@@ -99,13 +107,14 @@ namespace Storev2
       string E_ssn = Console.ReadLine();
 
       EmployeeServices Emp_serv = new EmployeeServices();
-
       IEmployeeService IEmp_serv = Emp_serv;
       IEmp_serv.RemoveEmployee(E_name, E_ssn, x);
 
 
-      //case 3
+
     }
+
+    //case 3
     public static void Get(Store x)
     {
       EmployeeServices Emp_serv = new EmployeeServices();
@@ -114,6 +123,21 @@ namespace Storev2
       IEmp_serv.ListEmployees(x);
     }
 
+
+    // case 4
+
+    public static void Find(Store storex)
+    {
+      Console.Write(" Please enter the employee's Name: ");
+      string E_name = Console.ReadLine();
+      Console.Write(" Please enter the employee's Social Security Number: ");
+      string E_ssn = Console.ReadLine();
+
+      EmployeeServices Emp_serv = new EmployeeServices();
+      IEmployeeService IEmp_serv = Emp_serv;
+      IEmp_serv.FindEmployee(E_name, E_ssn, storex);
+
+
+    }
   }
 }
-
