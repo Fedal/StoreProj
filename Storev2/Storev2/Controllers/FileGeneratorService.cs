@@ -14,7 +14,7 @@ namespace Storev2
 //Initializating the Data folder 
 		public static void GenerateFiles()
 		{
-      string path = Directory.GetCurrentDirectory()+"\\Data";
+      string path = Directory.GetCurrentDirectory() + "\\Data";
 			if (!Directory.Exists(path)) 
             {
                      DirectoryInfo di = Directory.CreateDirectory(path);
