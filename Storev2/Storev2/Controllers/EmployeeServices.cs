@@ -52,5 +52,27 @@ namespace Storev2
       }
     }
 
+    public void FindEmployee(string num, string ssnmb, Store y)
+    {
+      var found = false;
+      foreach (IEmployee x in y.Employees)
+      {
+
+        if ((x.Name == num) && (x.SSN == ssnmb))
+        {
+          Console.WriteLine("Employee {0} was found:\n{1} , {2}, {3} ,{4}.", x.Name, x.Name, x.SSN, x.Role, x.Salary);
+          found = true;
+          break;
+        }
+
+      }
+      if (found == false)
+      {
+        Console.WriteLine("Employee not found");
+      }
+
+    }
+
+
   }
 }
