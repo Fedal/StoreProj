@@ -50,6 +50,7 @@
     <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="Controllers\StockController.cs" />
     <Compile Include="Controllers\WarehouseController.cs" />
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\IEmployee.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Views\EmployeeMenu.cs" />
     <Compile Include="Views\InitializeMenu.cs" />
     <Compile Include="Views\ItemMenu.cs" />
+    <Compile Include="Views\ItemView.cs" />
     <Compile Include="Views\LocationView.cs" />
     <Compile Include="Views\MainMenu.cs" />
     <Compile Include="Views\StoreMenu.cs" />
