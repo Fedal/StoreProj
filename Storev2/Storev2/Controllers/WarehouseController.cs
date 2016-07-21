@@ -20,7 +20,7 @@ namespace Storev2
 				Console.Write("Warehouse name: ");
 				name = Console.ReadLine();
         store.WHouses.Add(new Warehouse(name));
-        LayoutControl.SetLayout(store.WHouses[store.WHouses.Count + i - 1]);
+        LayoutControl.SetLayout(store.WHouses[store.WHouses.Count - 1]);
 			}
 		}
 	}
