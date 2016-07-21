@@ -31,7 +31,7 @@ namespace Storev2
       var Layouts = from r in doc.Descendants("Layout")
                   select new
                   {
-                    OwnerName = r.Attribute("Name").ToString(),
+                    OwnerName = r.Attribute("Name").Value.ToString(),
                     shelveNr = int.Parse(r.Element("ShelveNr").Value),
                     shelveCapacity = int.Parse(r.Element("ShelveCapacity").Value),
                     rows = int.Parse(r.Element("Rows").Value),
