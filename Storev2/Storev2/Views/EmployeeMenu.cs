@@ -25,6 +25,7 @@ namespace Storev2
        
 
         Console.Write("\n Enter here -->");
+        
         choice = int.Parse(Console.ReadLine());
 
         switch (choice)
