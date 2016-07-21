@@ -16,6 +16,7 @@ namespace Storev2
       Console.WriteLine("3. View item by name");
       Console.WriteLine("4. View all items");
       Console.WriteLine("5. Move items to expiration shelve");
+      Console.WriteLine("6. View expiration shelve items");
       Console.WriteLine("0. Back");
 
       ConsoleKeyInfo cki = Console.ReadKey();
@@ -45,6 +46,11 @@ namespace Storev2
         case ConsoleKey.D5:
           {
             ItemController.MoveToExpShelve(store);
+            break;
+          }
+        case ConsoleKey.D6:
+          {
+            ItemView.ViewExpirationShelve(store);
             break;
           }
         case ConsoleKey.D0:

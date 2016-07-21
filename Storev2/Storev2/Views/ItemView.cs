@@ -56,5 +56,24 @@ namespace Storev2
       }
       ConfirmView.Show(store);
     }
+
+    internal static void ViewExpirationShelve(Store store)
+    {
+      int expirationShelveIndex = store.Shop.Layout.Shelves.Length;
+      Console.WriteLine("\n=== EXPIRATION SHELVE ITEMS ===");
+      for (int i = 0; i < store.Stock.Items.Count; i++ )
+        for (int j = 0; j < store.Stock.Items[i].Location.Count; j++)
+        {
+          if (store.Stock.Items[i].Location[j].Shelve == store.Shop.Layout.Shelves.Length)
+          {
+            Console.WriteLine("\n\tName: {0}", store.Stock.Items[i].Name);
+            Console.WriteLine("\tCategory: {0}", store.Stock.Items[i].Category);
+            Console.WriteLine("\tPrice: {0}", store.Stock.Items[i].Price);
+            Console.WriteLine("\tQuantity: {0}", store.Stock.Items[i].Quantity);
+            Console.WriteLine("\tExp. Date: {0}\n", store.Stock.Items[i].ExpDate);
+          }
+        }
+      ConfirmView.Show(store);
+    }
   }
 }
