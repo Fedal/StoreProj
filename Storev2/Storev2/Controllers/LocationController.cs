@@ -12,11 +12,9 @@ namespace Storev2
 		internal static Location SetLocation(IStoreHouse sHouse,ref int quantity)
 		{
 			Location loc;
-
 			loc = LocationDetalis(sHouse,ref quantity);
 			return loc;
 		}
-
 		private static Location LocationDetalis(IStoreHouse sHouse, ref int quantity)
 		{
 			int row = 0;
@@ -42,7 +40,6 @@ namespace Storev2
 				if (quantity > sHouse.Layout.Shelves[shelve - 1].Capacity - sHouse.Layout.Shelves[shelve - 1].Items)
 					Console.WriteLine("Shelve not available");
 			} while (quantity > sHouse.Layout.Shelves[shelve - 1].Capacity - sHouse.Layout.Shelves[shelve - 1].Items);
-
 			return new Location(sHouse.Name, row, shelve);
 		}
 	}

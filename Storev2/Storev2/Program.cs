@@ -23,6 +23,7 @@ namespace Storev2
       {
         FileStoreCotroler.GetLayout(store);
         FileEmpolyeeControler.GetEmps(store);
+        FileInventoryControl.GetItems(store);
       }
 
       MainMenu.Show(store);

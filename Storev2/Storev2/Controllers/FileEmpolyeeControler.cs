@@ -63,5 +63,21 @@ namespace Storev2
         }
       }
     }
+    public static void RemoveEmp(string ssn)
+    {
+      XDocument doc = XDocument.Load(path);
+
+      foreach (var x in doc.Descendants("Employe"))
+	  {
+		  if (x.Attribute("SSN").Value == ssn)
+		  {
+			  x.Remove();
+			  break;
+		  }
+	  }
+	  doc.Save(path);
+				  
+		
+    }
   }
 }

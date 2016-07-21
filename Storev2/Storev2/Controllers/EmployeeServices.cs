@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace Storev2
 {
-
-
   class EmployeeServices : IEmployeeService
   {
     public void AddEmployee(IEmployee x, Store y)
@@ -15,9 +13,6 @@ namespace Storev2
       y.Employees.Add(x);
       FileEmpolyeeControler.AddEmp(x);
     }
-
-
-
     public void RemoveEmployee(string num, string ssnmb, Store y)
     {
       var found = true;
@@ -29,6 +24,7 @@ namespace Storev2
         {
           Console.WriteLine("The employee {0} was remove.", x.Name);
           y.Employees.Remove(x);
+		  FileEmpolyeeControler.RemoveEmp(x.SSN);
           found = false;
           break;
         }
@@ -65,15 +61,12 @@ namespace Storev2
           found = true;
           break;
         }
-
       }
       if (found == false)
       {
         Console.WriteLine("Employee not found");
       }
-
     }
-
 
   }
 }

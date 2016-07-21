@@ -49,6 +49,7 @@ namespace Storev2
           }
         case ConsoleKey.D0:
           {
+            MainMenu.Show(store);
             break;
           }
         default:
@@ -58,7 +59,7 @@ namespace Storev2
           }
       }
 
-      MainMenu.Show(store);
+      Show(store);
     }
 
     private static Item NewItem(Store store)
