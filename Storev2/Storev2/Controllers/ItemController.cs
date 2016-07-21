@@ -11,7 +11,7 @@ namespace Storev2
 		internal static void Add(Store store, Item item)
 		{
 			store.Stock.Items.Add(item);
-      FileInventoryControl.Add(item);
+      //FileInventoryControl.Add(item);
 			ConfirmView.Show(store);
 		}
 
