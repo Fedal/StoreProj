@@ -11,7 +11,7 @@ namespace Storev2
 		internal static void Add(Store store, Item item)
 		{
 			store.Stock.Items.Add(item);
-      FileInventoryControl.Add(item);
+      //FileInventoryControl.Add(item);
 			ConfirmView.Show(store);
 		}
 
@@ -80,7 +80,7 @@ namespace Storev2
           }
         }
       }
-      for(int i=0;i<store.WHouses.Length; i++)
+      for(int i=0;i<store.WHouses.Count; i++)
         for(int j=0;j<store.WHouses[i].Items.Count; j++)
           if (store.WHouses[i].Items[j].ExpDate < dt)
           {

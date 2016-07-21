@@ -31,7 +31,7 @@ namespace Storev2
       var Layouts = from r in doc.Descendants("Layout")
                   select new
                   {
-                    OwnerName = r.Attribute("Name").ToString(),
+                    OwnerName = r.Attribute("Name").Value.ToString(),
                     shelveNr = int.Parse(r.Element("ShelveNr").Value),
                     shelveCapacity = int.Parse(r.Element("ShelveCapacity").Value),
                     rows = int.Parse(r.Element("Rows").Value),
@@ -49,14 +49,12 @@ namespace Storev2
       {
         WarhNr++;
       }
-      store.WHouses = new Warehouse[WarhNr];
       int i = -1;
       foreach (var x in Layouts)
       {
         if (i >= 0)
         {
-          
-          store.WHouses[i] = new Warehouse(x.OwnerName);
+          store.WHouses.Add(new Warehouse(x.OwnerName));
           store.WHouses[i].Layout = new Layout(x.shelveNr, x.shelveCapacity, x.rows);;
         }
         i++;

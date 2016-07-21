@@ -54,7 +54,6 @@
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
-    <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Controllers\StockController.cs" />
     <Compile Include="Controllers\WarehouseController.cs" />
     <Compile Include="Models\Administrator.cs" />
