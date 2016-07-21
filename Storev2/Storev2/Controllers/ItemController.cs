@@ -80,7 +80,7 @@ namespace Storev2
           }
         }
       }
-      for(int i=0;i<store.WHouses.Length; i++)
+      for(int i=0;i<store.WHouses.Count; i++)
         for(int j=0;j<store.WHouses[i].Items.Count; j++)
           if (store.WHouses[i].Items[j].ExpDate < dt)
           {

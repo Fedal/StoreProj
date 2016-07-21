@@ -49,14 +49,12 @@ namespace Storev2
       {
         WarhNr++;
       }
-      store.WHouses = new Warehouse[WarhNr];
       int i = -1;
       foreach (var x in Layouts)
       {
         if (i >= 0)
         {
-          
-          store.WHouses[i] = new Warehouse(x.OwnerName);
+          store.WHouses.Add(new Warehouse(x.OwnerName));
           store.WHouses[i].Layout = new Layout(x.shelveNr, x.shelveCapacity, x.rows);;
         }
         i++;

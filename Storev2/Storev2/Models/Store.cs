@@ -10,13 +10,20 @@ namespace Storev2
   {
     List<IEmployee> _employees = new List<IEmployee>();
 
-    Warehouse[] _wHouses;
+    List<Warehouse> _wHouses = new List<Warehouse>();
 
-    internal Warehouse[] WHouses
+    internal List<Warehouse> WHouses
     {
-      get { return _wHouses; }
-      set { _wHouses = value; }
+      get
+      {
+        return _wHouses;
+      }
+      set
+      {
+        _wHouses = value;
+      }
     }
+
     Stock _stock = new Stock();
 
     internal Stock Stock
